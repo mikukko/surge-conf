@@ -4,25 +4,25 @@
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Panda.png
 #!homepage=https://github.com/mikukko/surge-conf
 #!category=Mikukko
-#!date=2025-07-07 00:00:00
-#!arguments=cron表达式:10 0 * * *,nga.sign:nga.sign:NGA 签到,v2ex.sign:v2ex.sign:V2EX 签到,ithome.sign:ithome.sign:IT之家 签到
+#!date=2026-06-27 00:00:00
+#!arguments=cron表达式:10 0 * * *,NGA 签到:nga.sign, V2EX 签到:v2ex.sign,IT之家 签到:ithome.sign
 #!arguments-desc=cron表达式\n- 默认每天 0:10\n- 示例: 0 9 * * * (每天9点)\n\nNGA 签到: 填 # 关闭\n\nV2EX 签到: 填 # 关闭\n\nIT之家 签到: 填 # 关闭
 
 [Script]
 # NGA Cookie 获取
 NGA Cookie = type=http-request, pattern=^https:\/\/ngabbs\.com\/nuke.php\??, script-path=https://raw.githubusercontent.com/mikukko/surge-conf/master/scripts/nga_cookie.js, requires-body=true
 # NGA 每日签到
-{{{nga.sign}}} = type=cron, cronexp={{{cron表达式}}}, script-path=https://raw.githubusercontent.com/mikukko/surge-conf/master/scripts/nga.js, wake-system=true
+{{{NGA 签到}}} = type=cron, cronexp={{{cron表达式}}}, script-path=https://raw.githubusercontent.com/mikukko/surge-conf/master/scripts/nga.js, wake-system=true
 
 # V2EX Cookie 获取
 V2EX Cookie = type=http-request, pattern=^https:\/\/www\.v2ex\.com\/mission\/daily$, script-path=https://raw.githubusercontent.com/mikukko/surge-conf/master/scripts/v2ex_cookie.js
 # V2EX 每日签到
-{{{v2ex.sign}}} = type=cron, cronexp={{{cron表达式}}}, script-path=https://raw.githubusercontent.com/mikukko/surge-conf/master/scripts/v2ex.js, wake-system=true
+{{{V2EX 签到}}} = type=cron, cronexp={{{cron表达式}}}, script-path=https://raw.githubusercontent.com/mikukko/surge-conf/master/scripts/v2ex.js, wake-system=true
 
 # IT之家 Cookie 获取
 IT之家 Cookie = type=http-request, pattern=^https:\/\/napi\.ithome\.com\/api\/usersign\/getsigninfo, script-path=https://raw.githubusercontent.com/mikukko/surge-conf/master/scripts/ithome_cookie.js
 # IT之家 每日签到
-{{{ithome.sign}}} = type=cron, cronexp={{{cron表达式}}}, script-path=https://raw.githubusercontent.com/mikukko/surge-conf/master/scripts/ithome.js, wake-system=true
+{{{IT之家 签到}}} = type=cron, cronexp={{{cron表达式}}}, script-path=https://raw.githubusercontent.com/mikukko/surge-conf/master/scripts/ithome.js, wake-system=true
 
 [MITM]
 hostname = %APPEND% ngabbs.com, www.v2ex.com, napi.ithome.com
