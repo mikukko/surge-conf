@@ -5,8 +5,8 @@
 #!homepage=https://github.com/mikukko/surge-conf
 #!category=Mikukko
 #!date=2025-07-07 00:00:00
-#!arguments=cron表达式:10 0 * * *,nga.sign:nga.sign,v2ex.sign:v2ex.sign,ithome.sign:ithome.sign
-#!arguments-desc=cron表达式\n- 默认每天 0:10\n- 示例: 0 9 * * * (每天9点)\n\nnga.sign: 默认开启，配置为"#"时关闭\n\nv2ex.sign: 默认开启，配置为"#"时关闭\n\nithome.sign: 默认开启，配置为"#"时关闭
+#!arguments=cron表达式:10 0 * * *,nga.sign:nga.sign:NGA 签到,v2ex.sign:v2ex.sign:V2EX 签到,ithome.sign:ithome.sign:IT之家 签到
+#!arguments-desc=cron表达式\n- 默认每天 0:10\n- 示例: 0 9 * * * (每天9点)\n\nNGA 签到: 填 # 关闭\n\nV2EX 签到: 填 # 关闭\n\nIT之家 签到: 填 # 关闭
 
 [Script]
 # NGA Cookie 获取
