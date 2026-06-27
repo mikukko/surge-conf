@@ -1,0 +1,15 @@
+#!name=Google搜索重定向
+#!desc=将Google搜索重定向至.com域名
+#!author=Mikukko[https://github.com/mikukko]
+#!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
+#!homepage=https://github.com/mikukko/surge-conf
+#!category=Mikukko
+#!date=2026-06-27 00:00:00
+
+[URL Rewrite]
+# .cn 中国 | .com.hk 香港 | .com.tw 台湾 | .co.jp 日本 | .co.kr 韩国 | .com.sg 新加坡
+^https?:\/\/(www\.)?(g|google)\.(cn|com\.(hk|tw)|co\.(jp|kr)|com\.sg) https://www.google.com 307
+^https?:\/\/(ditu|maps)\.google\.(cn|com\.(hk|tw)|co\.(jp|kr)|com\.sg) https://maps.google.com 307
+
+[MITM]
+hostname = %APPEND% www.google.cn, www.google.com.hk, www.google.com.tw, www.google.co.jp, www.google.co.kr, www.google.com.sg
