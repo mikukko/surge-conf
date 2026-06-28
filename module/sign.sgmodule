@@ -5,8 +5,8 @@
 #!homepage=https://github.com/mikukko/surge-conf
 #!category=Mikukko
 #!date=2026-06-27 00:00:00
-#!arguments=NGA 签到:nga.sign,NGA cron:0 10 * * *,V2EX 签到:v2ex.sign,V2EX cron:5 8 * * *,IT之家 签到:ithome.sign,IT之家 cron:0 10 * * *
-#!arguments-desc=NGA 签到: 填 # 关闭\n\nNGA cron\n- 默认每天 10:00\n- 仅作用于 NGA 签到\n\nV2EX 签到: 填 # 关闭\n\nV2EX cron\n- 默认每天 8:05\n- 仅作用于 V2EX 签到\n\nIT之家 签到: 填 # 关闭\n\nIT之家 cron\n- 默认每天 10:00\n- 仅作用于 IT之家 签到
+#!arguments=NGA 签到:nga.sign,NGA cron:10 0 * * *,V2EX 签到:v2ex.sign,V2EX cron:5 8 * * *,IT之家 签到:ithome.sign,IT之家 cron:10 0 * * *
+#!arguments-desc=NGA 签到: 填 # 关闭\n\nNGA cron\n- 默认每天 0:10\n- 仅作用于 NGA 签到\n\nV2EX 签到: 填 # 关闭\n\nV2EX cron\n- 默认每天 8:05\n- 仅作用于 V2EX 签到\n\nIT之家 签到: 填 # 关闭\n\nIT之家 cron\n- 默认每天 0:10\n- 仅作用于 IT之家 签到
 
 [Script]
 # NGA Cookie 获取
